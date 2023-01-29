@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bytemd {
+  height: calc(100vh - 32px);
+}
