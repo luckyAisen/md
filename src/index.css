@@ -5,3 +5,11 @@
 .bytemd {
   height: calc(100vh - 32px);
 }
+
+.bytemd .bytemd-editor .CodeMirror .CodeMirror-lines {
+  max-width: 100%;
+}
+
+.bytemd .bytemd-preview .markdown-body {
+  max-width: 100%;
+}
