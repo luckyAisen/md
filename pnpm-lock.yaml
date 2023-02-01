@@ -14,6 +14,7 @@ specifiers:
   '@vitejs/plugin-react': ^3.0.0
   autoprefixer: ^10.4.13
   bytemd: ^1.20.0
+  fflate: ^0.7.4
   github-markdown-css: ^5.1.0
   highlight.js: ^11.7.0
   katex: ^0.16.4
@@ -34,6 +35,7 @@ dependencies:
   '@bytemd/plugin-mermaid': 1.20.0_bytemd@1.20.0
   '@bytemd/react': 1.20.0_react@18.2.0
   bytemd: 1.20.0
+  fflate: 0.7.4
   github-markdown-css: 5.1.0
   highlight.js: 11.7.0
   katex: 0.16.4
@@ -1329,6 +1331,10 @@ packages:
     resolution: {integrity: sha512-WtySTkS4OKev5JtpHXnib4Gxiurzh5NCGvWrFaZ34m6JehfTUhKZvn9njTfw48t6JumVQOmrKqpmGcdwxnhqBQ==}
     dependencies:
       format: 0.2.2
+    dev: false
+
+  /fflate/0.7.4:
+    resolution: {integrity: sha512-5u2V/CDW15QM1XbbgS+0DfPxVB+jUKhWEKuuFuHncbk3tEEqzmoXL+2KyOFuKGqOnmdIy0/davWF1CkuwtibCw==}
     dev: false
 
   /fill-range/7.0.1:
