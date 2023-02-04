@@ -1,5 +1,7 @@
 import { zlibSync, unzlibSync, strToU8, strFromU8 } from "fflate";
 
+import { saveAs } from "file-saver";
+
 export function debounce(fn: Function, n = 100) {
   let handle: any;
   return (...args: any[]) => {
@@ -30,4 +32,11 @@ export function atou(base64: string): string {
   // old unicode hacks for backward compatibility
   // https://base64.guru/developers/javascript/examples/unicode-strings
   return decodeURIComponent(escape(binary));
+}
+
+export function downloadFile(value: string, name = "README.md") {
+  const blob = new Blob([value], {
+    type: "text/markdown",
+  });
+  saveAs(blob, name);
 }

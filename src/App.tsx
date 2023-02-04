@@ -23,7 +23,7 @@ import Share from "./components/icon/Share";
 import GitHub from "./components/icon/Github";
 import Download from "./components/icon/Download";
 
-import { debounce, utoa, atou } from "./utils";
+import { debounce, utoa, atou, downloadFile } from "./utils";
 
 type AppState = {
   time: number;
@@ -47,14 +47,15 @@ const plugins = [
   }),
 ].filter((x) => x);
 
-const Header = () => {
+const Header = (props: { value: string }) => {
+  const { value } = props;
   const copyLink = async () => {
     await navigator.clipboard.writeText(location.href);
     alert("可共享的URL已复制到剪贴板。");
   };
 
-  const downloadFile = () => {
-    alert("下载还没搞好");
+  const download = () => {
+    downloadFile(value);
   };
 
   return (
@@ -71,7 +72,7 @@ const Header = () => {
         <button
           className="pr-4 text-gray-500 hover:text-gray-900"
           title="下载文件"
-          onClick={downloadFile}
+          onClick={download}
         >
           <Download className="w-5 h-6" />
         </button>
@@ -133,7 +134,7 @@ function App() {
 
   return (
     <div>
-      <Header />
+      <Header value={value} />
       <Editor
         value={value}
         mode="split"
